@@ -14,6 +14,3 @@ class FilmViewSet(viewsets.ModelViewSet):
     queryset = Film.objects.all()
     serializer_class = FilmSerializers
     permission_classes = []
-
-
-

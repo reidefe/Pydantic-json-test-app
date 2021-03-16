@@ -1,12 +1,12 @@
 from django.db import models
-from pydantic import BaseModel, Field 
+from pydantic import BaseModel, Field
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
 
 class Actor(models.Model):
     """
-      test model for Actors
+    test model for Actors
     """
 
     name = models.CharField(verbose_name="TestApp name", max_length=90)
@@ -23,11 +23,11 @@ class Actor(models.Model):
 
 class Film(models.Model):
     """
-      test model for  Films
+    test model for  Films
     """
 
     title = models.CharField(max_length=90)
-    actor = models.ForeignKey(Actor, on_delete=models.CASCADE, blank=True, null= True)
+    actor = models.ForeignKey(Actor, on_delete=models.CASCADE, blank=True, null=True)
     year = models.DateField(auto_now=False, auto_now_add=False)
     duration = models.DecimalField(max_digits=10, decimal_places=2)
     data = models.JSONField()

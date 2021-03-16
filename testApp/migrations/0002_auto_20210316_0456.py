@@ -7,18 +7,23 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('testApp', '0001_initial'),
+        ("testApp", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='film',
-            name='actor',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='testApp.actor'),
+            model_name="film",
+            name="actor",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="testApp.actor",
+            ),
         ),
         migrations.AlterField(
-            model_name='film',
-            name='year',
+            model_name="film",
+            name="year",
             field=models.DateField(),
         ),
     ]
